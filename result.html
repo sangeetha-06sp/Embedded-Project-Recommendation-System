@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Project Recommendation | EmbedCraft</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="animation.css">
+<link rel="stylesheet" href="darkmode.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body class="dark-mode" onload="generateRecommendation()">
+
+<button id="theme-btn" onclick="toggleTheme()">
+<i class="bi bi-moon-stars-fill"></i>
+</button>
+
+<div class="container fade">
+
+<h1>
+<i class="bi bi-award-fill"></i>
+Your Recommended Project
+</h1>
+
+<p>
+Based on your selections, EmbedCraft has generated the following project.
+</p>
+
+<div class="result-card">
+
+<h2 id="projectName"></h2>
+
+<hr>
+
+<p>
+<b><i class="bi bi-building-fill"></i> Domain :</b>
+<span id="domain"></span>
+</p>
+
+<p>
+<b><i class="bi bi-cpu-fill"></i> Controller :</b>
+<span id="controller"></span>
+</p>
+
+<p>
+<b><i class="bi bi-wifi"></i> Communication :</b>
+<span id="communication"></span>
+</p>
+
+<p>
+<b><i class="bi bi-diagram-3-fill"></i> Sensors :</b>
+<span id="sensors"></span>
+</p>
+
+<p>
+<b><i class="bi bi-gear-fill"></i> Features :</b>
+<span id="features"></span>
+</p>
+
+<p>
+<b><i class="bi bi-cash-stack"></i> Estimated Cost :</b>
+<span id="cost"></span>
+</p>
+
+<p>
+<b><i class="bi bi-bar-chart-fill"></i> Difficulty :</b>
+<span id="difficulty"></span>
+</p>
+
+<p>
+<b><i class="bi bi-lightbulb-fill"></i> Future Scope :</b>
+<span id="future"></span>
+</p>
+
+</div>
+
+<br>
+
+<button class="start-btn"
+onclick="window.print()">
+
+<i class="bi bi-download"></i>
+
+Download Report
+
+</button>
+
+<button
+class="start-btn"
+style="float:right;"
+onclick="restartProject()">
+
+<i class="bi bi-arrow-repeat"></i>
+
+Restart
+
+</button>
+
+</div>
+
+<script src="script.js"></script>
+<script src="recommendation.js"></script>
+<script src="darkmode.js"></script>
+
+</body>
+
+</html>

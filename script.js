@@ -1,29 +1,123 @@
-function generateProject(){
+/* ==========================================
+   EMBEDCRAFT - SCRIPT.JS
+========================================== */
 
-    let application = document.getElementById("application").value;
-    let controller = document.getElementById("controller").value;
-    let communication = document.getElementById("communication").value;
+// Store user selections
+let projectData = {
+    domain: "",
+    controller: "",
+    communication: "",
+    sensors: [],
+    features: []
+};
 
-    let result = document.getElementById("result");
+// Save data in browser
+function saveData(){
 
-    if(application=="" || controller=="" || communication==""){
-        result.innerHTML="<h3>Please select all required fields.</h3>";
-        return;
+    localStorage.setItem(
+        "projectData",
+        JSON.stringify(projectData)
+    );
+
+}
+
+// Load saved data
+function loadData(){
+
+    let data = localStorage.getItem("projectData");
+
+    if(data){
+
+        projectData = JSON.parse(data);
+
     }
 
-    result.innerHTML=`
-    <h2>Recommended Project</h2>
+}
 
-    <p><b>Project Name:</b> Smart ${application} Monitoring System</p>
+// Go to next page
+function nextPage(page){
 
-    <p><b>Controller:</b> ${controller}</p>
+    window.location.href = page;
 
-    <p><b>Communication:</b> ${communication}</p>
+}
 
-    <p><b>Estimated Cost:</b> ₹1800 - ₹2500</p>
+// Go to previous page
+function previousPage(page){
 
-    <p><b>Difficulty:</b> Intermediate</p>
+    window.location.href = page;
 
-    <p><b>Application:</b> ${application}</p>
-    `;
+}
+
+// Domain Selection
+function selectDomain(domain){
+
+    projectData.domain = domain;
+
+    saveData();
+
+}
+
+// Controller Selection
+function selectController(controller){
+
+    projectData.controller = controller;
+
+    saveData();
+
+}
+
+// Communication Selection
+function selectCommunication(type){
+
+    projectData.communication = type;
+
+    saveData();
+
+}
+
+// Sensor Selection
+function toggleSensor(sensor){
+
+    if(projectData.sensors.includes(sensor)){
+
+        projectData.sensors =
+        projectData.sensors.filter(item => item !== sensor);
+
+    }
+
+    else{
+
+        projectData.sensors.push(sensor);
+
+    }
+
+    saveData();
+
+}
+
+// Feature Selection
+function toggleFeature(feature){
+
+    if(projectData.features.includes(feature)){
+
+        projectData.features =
+        projectData.features.filter(item => item !== feature);
+
+    }
+
+    else{
+
+        projectData.features.push(feature);
+
+    }
+
+    saveData();
+
+}
+
+// Clear Project
+function resetProject(){
+
+    localStorage.removeItem("projectData");
+
 }

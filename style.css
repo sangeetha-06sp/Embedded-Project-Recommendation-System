@@ -1,63 +1,295 @@
-body{
-    font-family: Arial, sans-serif;
-    background:#f4f6f8;
+/* ===========================
+   EMBEDCRAFT - STYLE.CSS
+=========================== */
+
+*{
     margin:0;
     padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-.container{
-    width:70%;
-    margin:40px auto;
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 0 10px gray;
+html{
+    scroll-behavior:smooth;
 }
 
-h1{
-    text-align:center;
-    color:#0b5394;
-}
-
-p{
-    text-align:center;
-}
-
-label{
-    font-weight:bold;
-    display:block;
-    margin-top:20px;
-}
-
-select{
-    width:100%;
-    padding:10px;
-    margin-top:5px;
-}
-
-.checkbox-group{
-    margin-top:10px;
-}
-
-button{
-    margin-top:25px;
-    width:100%;
-    padding:12px;
-    background:#0b5394;
+body{
+    background:#081b29;
     color:white;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+
+    width:100%;
+    height:100vh;
+
+    background:linear-gradient(rgba(0,0,0,0.65),
+    rgba(0,0,0,0.75)),
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+}
+
+.content{
+
+    width:80%;
+    max-width:900px;
+
+    padding:40px;
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+
+    box-shadow:0px 0px 20px rgba(0,255,255,.25);
+
+}
+
+.blue{
+
+    color:#00d4ff;
+
+}
+
+.content h1{
+
+    font-size:65px;
+
+    margin-bottom:10px;
+
+}
+
+.content h2{
+
+    font-size:30px;
+
+    margin-bottom:20px;
+
+    font-weight:500;
+
+}
+
+.content p{
+
+    font-size:18px;
+
+    line-height:30px;
+
+    margin-bottom:35px;
+
+    color:#dddddd;
+
+}
+
+/* ================= BUTTON ================= */
+
+.start-btn{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    padding:16px 35px;
+
+    background:#00bcd4;
+
+    color:white;
+
+    border-radius:40px;
+
+    font-size:18px;
+
+    transition:.4s;
+
+    font-weight:bold;
+
+}
+
+.start-btn:hover{
+
+    background:#0097a7;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 20px cyan;
+
+}
+
+/* ================= DARK MODE BUTTON ================= */
+
+#theme-btn{
+
+    position:fixed;
+
+    top:20px;
+
+    right:25px;
+
+    width:55px;
+
+    height:55px;
+
     border:none;
-    border-radius:5px;
-    font-size:16px;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:#081b29;
+
+    font-size:24px;
+
     cursor:pointer;
+
+    z-index:1000;
+
+    transition:.4s;
+
 }
 
-button:hover{
-    background:#063970;
+#theme-btn:hover{
+
+    transform:rotate(30deg);
+
 }
 
-#result{
-    margin-top:30px;
-    padding:20px;
-    border:2px solid #0b5394;
-    border-radius:10px;
+/* ================= FEATURES ================= */
+
+.features{
+
+    background:#0f2438;
+
+    padding:90px 8%;
+
+}
+
+.features h2{
+
+    text-align:center;
+
+    font-size:40px;
+
+    margin-bottom:50px;
+
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:white;
+
+    color:#081b29;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 0 25px cyan;
+
+}
+
+.card i{
+
+    font-size:60px;
+
+    color:#00bcd4;
+
+    margin-bottom:20px;
+
+}
+
+.card h3{
+
+    margin-bottom:15px;
+
+}
+
+.card p{
+
+    color:#555;
+
+    line-height:26px;
+
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    background:#081b29;
+
+    text-align:center;
+
+    padding:25px;
+
+    color:#bdbdbd;
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+.content h1{
+
+font-size:42px;
+
+}
+
+.content h2{
+
+font-size:22px;
+
+}
+
+.content{
+
+padding:25px;
+
+}
+
+.start-btn{
+
+padding:14px 28px;
+
+font-size:16px;
+
+}
+
+.features h2{
+
+font-size:30px;
+
+}
+
 }

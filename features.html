@@ -1,1 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Select Features | EmbedCraft</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="animation.css">
+<link rel="stylesheet" href="darkmode.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body class="dark-mode">
+
+<button id="theme-btn" onclick="toggleTheme()">
+<i class="bi bi-moon-stars-fill"></i>
+</button>
+
+<div class="container">
+
+<h1>Select Additional Features</h1>
+
+<p>Choose the extra modules required for your project.</p>
+
+<div class="progress-box">
+
+<div class="progress">
+
+<div id="progress" style="width:83.3%;">
+Step 5 of 6
+</div>
+
+</div>
+
+</div>
+
+<div class="cards">
+
+<div class="card zoom" onclick="toggleFeature('LCD Display')">
+
+<i class="bi bi-display-fill"></i>
+
+<h2>LCD Display</h2>
+
+<p>Display sensor values in real time.</p>
+
+</div>
+
+<div class="card zoom" onclick="toggleFeature('Relay Module')">
+
+<i class="bi bi-lightning-fill"></i>
+
+<h2>Relay Module</h2>
+
+<p>Control electrical devices automatically.</p>
+
+</div>
+
+<div class="card zoom" onclick="toggleFeature('Buzzer')">
+
+<i class="bi bi-volume-up-fill"></i>
+
+<h2>Buzzer</h2>
+
+<p>Generate warning alerts.</p>
+
+</div>
+
+<div class="card zoom" onclick="toggleFeature('IoT Dashboard')">
+
+<i class="bi bi-graph-up-arrow"></i>
+
+<h2>IoT Dashboard</h2>
+
+<p>Monitor project through cloud dashboard.</p>
+
+</div>
+
+<div class="card zoom" onclick="toggleFeature('Mobile Notification')">
+
+<i class="bi bi-phone-fill"></i>
+
+<h2>Mobile Notification</h2>
+
+<p>Receive alerts on your smartphone.</p>
+
+</div>
+
+<div class="card zoom" onclick="toggleFeature('Cloud Storage')">
+
+<i class="bi bi-cloud-fill"></i>
+
+<h2>Cloud Storage</h2>
+
+<p>Store sensor data securely online.</p>
+
+</div>
+
+</div>
+
+<br>
+
+<button class="start-btn"
+onclick="goBack('sensors.html')">
+
+<i class="bi bi-arrow-left-circle-fill"></i>
+
+Previous
+
+</button>
+
+<button class="start-btn"
+style="float:right;"
+onclick="goNext('result.html')">
+
+Generate Project
+
+<i class="bi bi-arrow-right-circle-fill"></i>
+
+</button>
+
+</div>
+
+<script src="script.js"></script>
+<script src="navigation.js"></script>
+<script src="darkmode.js"></script>
+
+</body>
+
+</html>

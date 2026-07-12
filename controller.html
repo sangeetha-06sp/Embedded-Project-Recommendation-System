@@ -1,1 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Select Controller | EmbedCraft</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="animation.css">
+<link rel="stylesheet" href="darkmode.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body class="dark-mode">
+
+<button id="theme-btn" onclick="toggleTheme()">
+<i class="bi bi-moon-stars-fill"></i>
+</button>
+
+<div class="container">
+
+<h1>Select Your Microcontroller</h1>
+
+<p>Select the controller suitable for your project.</p>
+
+<div class="progress-box">
+
+<div class="progress">
+
+<div id="progress" style="width:33.3%;">
+Step 2 of 6
+</div>
+
+</div>
+
+</div>
+
+<div class="cards">
+
+<div class="card zoom"
+onclick="selectController('ESP8266');goNext('communication.html');">
+
+<i class="bi bi-cpu-fill"></i>
+
+<h2>ESP8266</h2>
+
+<p>
+Wi-Fi Enabled Controller<br>
+Best for IoT Projects
+</p>
+
+</div>
+
+<div class="card zoom"
+onclick="selectController('ESP32');goNext('communication.html');">
+
+<i class="bi bi-cpu"></i>
+
+<h2>ESP32</h2>
+
+<p>
+Dual Core Controller<br>
+Wi-Fi + Bluetooth
+</p>
+
+</div>
+
+<div class="card zoom"
+onclick="selectController('Arduino UNO');goNext('communication.html');">
+
+<i class="bi bi-motherboard-fill"></i>
+
+<h2>Arduino UNO</h2>
+
+<p>
+Beginner Friendly<br>
+Easy Programming
+</p>
+
+</div>
+
+<div class="card zoom"
+onclick="selectController('STM32');goNext('communication.html');">
+
+<i class="bi bi-memory"></i>
+
+<h2>STM32</h2>
+
+<p>
+High Performance MCU<br>
+Industrial Applications
+</p>
+
+</div>
+
+</div>
+
+<br>
+
+<button class="start-btn"
+onclick="goBack('domain.html')">
+
+<i class="bi bi-arrow-left-circle-fill"></i>
+
+Previous
+
+</button>
+
+</div>
+
+<script src="script.js"></script>
+<script src="navigation.js"></script>
+<script src="darkmode.js"></script>
+
+</body>
+
+</html>

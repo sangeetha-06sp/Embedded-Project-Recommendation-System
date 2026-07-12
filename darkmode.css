@@ -1,0 +1,71 @@
+/* ===========================
+   EMBEDCRAFT - DARKMODE.CSS
+=========================== */
+
+/* Dark Theme */
+
+.dark-mode{
+    background:#081b29;
+    color:white;
+}
+
+.dark-mode .hero{
+    background:linear-gradient(rgba(0,0,0,0.75),
+    rgba(0,0,0,0.75)),
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600");
+    background-size:cover;
+    background-position:center;
+}
+
+.dark-mode .content{
+    background:rgba(255,255,255,0.08);
+    color:white;
+}
+
+.dark-mode .card{
+    background:#142c44;
+    color:white;
+}
+
+.dark-mode .card p{
+    color:#d9d9d9;
+}
+
+.dark-mode footer{
+    background:#06131f;
+    color:#bfbfbf;
+}
+
+/* Light Theme */
+
+.light-mode{
+    background:#f4f8fc;
+    color:#222;
+}
+
+.light-mode .hero{
+    background:linear-gradient(rgba(255,255,255,0.60),
+    rgba(255,255,255,0.60)),
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600");
+    background-size:cover;
+    background-position:center;
+}
+
+.light-mode .content{
+    background:rgba(255,255,255,0.75);
+    color:#222;
+}
+
+.light-mode .card{
+    background:white;
+    color:#222;
+}
+
+.light-mode .card p{
+    color:#555;
+}
+
+.light-mode footer{
+    background:#f0f0f0;
+    color:#555;
+}

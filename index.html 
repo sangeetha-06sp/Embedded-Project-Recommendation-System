@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Project Recommendation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Embedded Project Recommendation System</h1>
+
+    <p>Select the required options to generate an embedded system project.</p>
+
+    <label>Application</label>
+    <select id="application">
+        <option value="">-- Select Application --</option>
+        <option>Industrial</option>
+        <option>Smart Home</option>
+        <option>Agriculture</option>
+        <option>Healthcare</option>
+    </select>
+
+    <label>Microcontroller</label>
+    <select id="controller">
+        <option value="">-- Select Controller --</option>
+        <option>ESP8266</option>
+        <option>ESP32</option>
+        <option>Arduino Uno</option>
+        <option>STM32</option>
+    </select>
+
+    <label>Communication</label>
+    <select id="communication">
+        <option value="">-- Select Communication --</option>
+        <option>Wi-Fi</option>
+        <option>Bluetooth</option>
+        <option>GSM</option>
+        <option>LoRa</option>
+    </select>
+
+    <label>Select Sensors</label>
+
+    <div class="checkbox-group">
+        <input type="checkbox" id="temp"> Temperature <br>
+        <input type="checkbox" id="gas"> Gas <br>
+        <input type="checkbox" id="humidity"> Humidity <br>
+        <input type="checkbox" id="motion"> Motion <br>
+        <input type="checkbox" id="vibration"> Vibration <br>
+        <input type="checkbox" id="water"> Water Level
+    </div>
+
+    <button onclick="generateProject()">Generate Project</button>
+
+    <div id="result"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
